@@ -19,8 +19,12 @@
 body{
     color: var(--color);
     /* background-color: var(--background); */
-    background-image: var(--gradient);
-    
+    /* background-image: var(--gradient); */
+
+    background: radial-gradient(at 91% 94%, #29000C 0px, transparent 50%), radial-gradient(at 22% 54%, #000A2E 0px, transparent 50%), radial-gradient(at 96% 54%, #000000 0px, transparent 50%), radial-gradient(at 51% 35%, #000278 0px, transparent 50%), radial-gradient(at 32% 58%, #000A2E 0px, transparent 50%) #000000;;
+    mix-blend-mode: var(--_gradient-blend-mode);
+    backdrop-filter: blur(var(--_gradient-blur)) contrast(100%) brightness(100%);
+-webkit-backdrop-filter: blur(var(--_gradient-blur)) contrast(100%) brightness(100%);
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--body-copy);
     block-size: 100vh;
