@@ -4,7 +4,6 @@
     --background-opacity: rgba(255, 255, 255, 0.014);
 
     --body-copy: 2rem;
-    --heading-copy: calc(var(--body-copy) * 2);
     --heading-copy: calc(var(--body-copy) * 4);
     --caption-copy: calc(var(--body-copy) * 0.5);
 
@@ -16,8 +15,6 @@
 /* want a pattern */
 /* found this pattern https://css-pattern.com/z-shape/*/
 /* I learned that... */
-body {
-  --s: 106px; /* control the size*/
 /* body {
   --s: 106px;
   --c1: var(--background);
@@ -30,7 +27,6 @@ body {
     conic-gradient(from -30deg at 87.5% 50%,var(--c2) 120deg,var(--c1) 0 240deg,#0000 0),
     conic-gradient(from  90deg at 37.5% 50%,var(--c2) 120deg,var(--c1) 0 180deg,var(--c2) 0 240deg,var(--c1) 0);
   background-size: calc(5*var(--s)) calc(10*var(--s));
-}
 } */
 
 body{
