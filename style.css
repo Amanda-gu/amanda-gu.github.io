@@ -70,8 +70,6 @@ ul{
 }
 
 hgroup, footer{
-    color: var(--background);
-    background-color: var(--color);
     background-color: var(--background-opacity);
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
