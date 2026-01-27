@@ -1,10 +1,14 @@
 :root{
-    --color: rgb(205, 255, 206);
-    --background: rgb(67, 34, 156);
+    --color: rgb(250, 250, 250);
+    --background: rgb(13, 13, 13);
+    --background-opacity: rgba(255, 255, 255, 0.014);
 
     --body-copy: 2rem;
     --heading-copy: calc(var(--body-copy) * 2);
+    --heading-copy: calc(var(--body-copy) * 4);
+    --caption-copy: calc(var(--body-copy) * 0.5);
 
+    --space-bar-0: 0.8rem;
     --space-bar-1: 2rem;
     --space-bar-2: calc(var(--space-bar-1) * 1.5);
 }
@@ -14,6 +18,8 @@
 /* I learned that... */
 body {
   --s: 106px; /* control the size*/
+/* body {
+  --s: 106px;
   --c1: var(--background);
   --c2: rgb(30, 12, 80);
   
@@ -25,6 +31,7 @@ body {
     conic-gradient(from  90deg at 37.5% 50%,var(--c2) 120deg,var(--c1) 0 180deg,var(--c2) 0 240deg,var(--c1) 0);
   background-size: calc(5*var(--s)) calc(10*var(--s));
 }
+} */
 
 body{
     color: var(--color);
@@ -37,13 +44,20 @@ body{
     align-items: center;
 }
 
+hgroup, main, footer{
+    margin: 2rem;
+}
+
 main{
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
 }
 
 h1{
-    font-size: var(--heading-copy);
+    font-size: var(--headline-copy);
+}
+footer{
+    font-size: var(--caption-copy);
 }
 
 ul{
@@ -51,11 +65,20 @@ ul{
     display: grid;
     gap: var(--space-bar-1);
     
+    li{
+        background-color: var(--background-opacity);
+        border-radius: 100rem;
+        padding-inline: var(--space-bar-2);
+        padding-block: var(--space-bar-1);
+    }
 }
 
 hgroup, footer{
     color: var(--background);
     background-color: var(--color);
+    background-color: var(--background-opacity);
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
+    border-radius: 100rem;
+    
 }
