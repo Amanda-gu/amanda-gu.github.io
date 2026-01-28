@@ -6,11 +6,11 @@
 
 :root{
     --color: rgb(17, 17, 17);
-    --link-color: rgb(33, 0, 198);
-    --background: rgb(224, 224, 224);
+    --link-color: rgb(86, 86, 86);
+    --background: rgb(244, 244, 242);
     --grey: #414141;
 
-    --background-opacity: rgba(0, 0, 0, 0.049);
+    --background-opacity: rgba(0, 0, 0, 0.06);
 
     --card-height:1rem;
     --card-width: auto;
@@ -55,13 +55,12 @@ body{
 hgroup, main, footer{
     margin-inline: var(--space-page-margin);
     margin-block: var(--space-bar-2);
-    backdrop-filter: blur(2rem);
 }
 
 
-section, footer{
+section, footer, .cta{
     background-color: var(--background-opacity);
-    padding-inline: var(--space-bar-1);
+    padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
     border-radius: var(--space-page-margin);
 }
@@ -71,12 +70,16 @@ hgroup{
     justify-content:space-between;
     column-gap: var(--space-bar-1);
     align-items: center;
-
     font-size: var(--body-copy);
     position: sticky;
     inset-block-start: var(--space-bar-2);
     z-index: 1;
+    background-blend-mode: difference;
 
+    section:first-child{
+        backdrop-filter: blur(2rem);
+        overflow: hidden;
+    }
     section{
         display: flex;
         justify-content: space-between;
@@ -182,17 +185,13 @@ img{
 .cta{
     width: max-content;
     position: relative;
-    border-radius: var(--space-page-margin);
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
     font-size: var(--body-copy);
     color: var(--color);
-    background-color: var(--background-opacity);
-
-    padding-inline: var(--space-bar-1);
-    padding-block: var(--space-bar-1);
+    
 }
 
 
@@ -202,7 +201,7 @@ img{
     border-radius: var(--space-page-margin);
     background-image: linear-gradient(
     var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
+    , #ffffff, #ffffff 43%, #d5d5d5);
     z-index: -1;
     animation: none;
     opacity: 0;
@@ -229,7 +228,7 @@ img{
 
 .cta:hover {
     color: var(--link-color);
-    background-color: #e1e1e1;
+    background-color: #ffffff;
     transition: color 1s;
 }
 .cta:hover:before, .cta:hover:after {
