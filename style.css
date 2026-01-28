@@ -45,6 +45,7 @@ body{
 }
 @media(width<800px){
     :root{
+         --body-copy: 1rem;
         --space-bar-0: 0.6rem;
         --space-bar-1: 0.8rem;
         --space-bar-2: calc(var(--space-bar-1) * 1.8);
@@ -143,7 +144,8 @@ footer{
 }
 
 img{
-    border-radius: var(--space-bar-3);
+    border-radius: var(--space-bar-2);
+    overflow: hidden;
 }
 
 #binding{
