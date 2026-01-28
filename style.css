@@ -7,6 +7,7 @@
 :root{
     --color: rgb(250, 250, 250);
     --link-color: #7da6ff;
+    --link-color: #94cdff;
     --background: rgb(13, 13, 13);
 
     --background-opacity: rgba(255, 255, 255, 0.014);
@@ -22,6 +23,7 @@
     --space-bar-0: 0.8rem;
     --space-bar-1: 1rem;
     --space-bar-2: calc(var(--space-bar-1) * 1.5);
+    --space-page-margin: 10rem;
 }
 
 body{
@@ -35,8 +37,21 @@ body{
     align-items: center;
 }
 
+
+@media(width<1000px){
+    :root{
+         --space-page-margin: 4rem;
+    }
+}
+@media(width<800px){
+    :root{
+         --space-page-margin: 2rem;
+    }
+}
+
 hgroup, main, footer{
     margin-inline: 10rem;
+    margin-inline: var(--space-page-margin);
     margin-block: var(--space-bar-2);
 }
 
@@ -76,8 +91,15 @@ hgroup{
         ul{
             display: flex;
             column-gap: var(--space-bar-1);
+            column-gap: var(--space-bar-1); 
         }
+        svg{
+                width: 1rem;
+                height: 1rem;
+                fill: var(--color);
+            }
     }
+
 
 }
 
@@ -133,7 +155,7 @@ footer{
     the border is an illusion made by offsetting the color block
     */
 .secondarycta:hover{
-    color: var(--link-color);
+    fill: var(--link-color);
 }
 .cta{
     width: auto;
