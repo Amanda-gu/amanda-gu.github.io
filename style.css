@@ -6,12 +6,11 @@
 
 :root{
     --color: rgb(17, 17, 17);
-    --link-color: #94cdff;
+    --link-color: rgb(33, 0, 198);
     --background: rgb(224, 224, 224);
     --grey: #414141;
 
     --background-opacity: rgba(0, 0, 0, 0.049);
-
 
     --card-height:1rem;
     --card-width: auto;
@@ -87,7 +86,7 @@ hgroup{
         ul{
             display: flex;
             column-gap: var(--space-bar-1); 
-        }
+         }
         svg{
                 width: 1rem;
                 height: 1rem;
@@ -120,30 +119,52 @@ footer{
 
 #project{
     display: grid;
-    gap: var(--space-bar-1);
-    grid-template-columns: 1fr;   
-    
-    .card{
-        padding-inline: var(--space-bar-2);
-        padding-block: var(--space-bar-1);
+    gap: var(--space-bar-2);
+    grid-template-columns: repeat(7, 1fr); 
+
+    li{
+        @media(width<600px){
+            grid-column: 1 /span 7;
+            }
     }
 }
-
-
-
 .card {
-    width: auto;
-    height: 30vh;
+    
     position: relative;
     border-radius: var(--space-bar-3);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    gap: var(--space-bar-0);
     display: flex;
+    flex-direction: column;
     font-size: var(--body-copy);
     color: var(--color);
-    background-color: var(--background-opacity);
+    /* background-color: var(--background-opacity); */
+
 }
+
+img{
+    border-radius: var(--space-bar-3);
+}
+
+#binding{
+    grid-column: 1 /span 3;
+}
+#spread{
+    grid-column: 3 /span 5;
+}
+#manuscript{
+    grid-column: 1 /span 3;
+}
+#links{
+    grid-column: 3 /span 5;
+
+}
+#functions{
+    grid-column: 1 /span 3;
+}
+
+
+
 
 
 
@@ -159,7 +180,7 @@ footer{
     fill: var(--link-color);
 }
 .cta{
-    width: auto;
+    width: max-content;
     position: relative;
     border-radius: var(--space-page-margin);
     justify-content: center;
@@ -169,6 +190,9 @@ footer{
     font-size: var(--body-copy);
     color: var(--color);
     background-color: var(--background-opacity);
+
+    padding-inline: var(--space-bar-1);
+    padding-block: var(--space-bar-1);
 }
 
 
@@ -204,7 +228,7 @@ footer{
 }
 
 .cta:hover {
-    color: rgb(33, 0, 198);
+    color: var(--link-color);
     background-color: #e1e1e1;
     transition: color 1s;
 }
