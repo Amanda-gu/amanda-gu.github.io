@@ -6,19 +6,21 @@
 
 :root{
     --color: rgb(250, 250, 250);
+    --link-color: #7da6ff;
     --background: rgb(13, 13, 13);
     --gradient: radial-gradient(circle, #000000, #0a0004, #0f000b, #110013, #0f001a, #14072b, #100d3e, #001253, #001679, #0018a0, #0814c7, #2d00ee);
+
     --background-opacity: rgba(255, 255, 255, 0.014);
 
     /* --_gradient-blend-mode: normal;
     --_gradient-blur: 0px; */
 
-    --card-height: 30vh;
+    --card-height:1rem;
     --card-width: auto;
 
-    --body-copy: 2rem;
+    --body-copy: 1rem;
     --heading-copy: calc(var(--body-copy) * 0.8);
-    --caption-copy: calc(var(--body-copy) * 0.5);
+    --caption-copy: calc(var(--body-copy) * 0.8);
 
     --space-bar-0: 0.8rem;
     --space-bar-1: 1rem;
@@ -44,10 +46,12 @@ body{
 hgroup, main, footer{
     margin-inline: 10rem;
     margin-block: 1rem;
+    margin-block: var(--space-bar-2);
 }
 
 main{
     margin-block:1rem;
+    margin-block:var(--space-bar-1);
 }
 
 /* main{
@@ -57,25 +61,7 @@ main{
 
 h1{
     font-size: var(--heading-copy);
-}
-footer{
-    font-size: var(--caption-copy);
-}
-
-ul{
-    /* padding-inline: var(--space-bar-2); */
-    display: grid;
-    gap: var(--space-bar-1);
-    grid-template-columns: 1fr 1fr 1fr;
-   
-    
-    li{
-        padding-inline: var(--space-bar-2);
-        padding-block: var(--space-bar-1);
-    }
-}
-
-hgroup, footer{
+section, footer{
     background-color: var(--background-opacity);
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
@@ -83,23 +69,60 @@ hgroup, footer{
     
 }
 
+hgroup{
+    display: flex;
+    justify-content:space-between;
+    column-gap: var(--space-bar-1);
+    align-items: center;
+
+    font-size: var(--body-copy);
+    position: sticky;
+    inset-block-start: var(--space-bar-2);
+    z-index: 1;
+
+    section{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    
+        ul{
+            display: flex;
+            column-gap: var(--space-bar-1);
+        }
+    }
+
+}
+
+footer{
+    font-size: var(--caption-copy);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    p:first-child{
+        font-size: var(--body-copy);
+    }
+    p{
+        padding-block: 0.4rem;
+    }
+}
 
 
+#project{
+    display: grid;
+    gap: var(--space-bar-1);
+    grid-template-columns: 1fr;   
+    
+    .card{
+        padding-inline: var(--space-bar-2);
+        padding-block: var(--space-bar-1);
+    }
+}
 
-/* i want to have a cool hover efffect */
-/* i found this gradient border example on codepen:https://codepen.io/gayane-gasparyan/pen/jOmaBQK */
-/* i reversed the interaction so my border animated when on hover */
-
-/* i learned that:
-    this example uses pseudo element for the border.
-    the border is an illusion made by offsetting the color block
-    */
 
 
 .card {
-    width: var(--card-width);
-    height: var(--card-height);
-
+    width: auto;
+    height: 30vh;
     position: relative;
     border-radius: 4rem;
     justify-content: center;
@@ -112,9 +135,37 @@ hgroup, footer{
 }
 
 
-.card:before, .card:after {
+
+/* i want to have a cool hover efffect */
+/* i found this gradient border example on codepen:https://codepen.io/gayane-gasparyan/pen/jOmaBQK */
+/* i reversed the interaction so my border animated when on hover */
+
+/* i learned that:
+    this example uses pseudo element for the border.
+    the border is an illusion made by offsetting the color block
+    */
+.secondarycta:hover{
+    color: var(--link-color);
+}
+.cta{
+    width: auto;
+    /* height: auto; */
+    position: relative;
+    border-radius: 10rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: var(--body-copy);
+    color: var(--background);
+    background-color: #d5d5d5;
+}
+
+
+.cta:before, .cta:after {
     content: "";
     position: absolute;
+    border-radius: 10rem;
     background-image: linear-gradient(
     var(--rotate)
     , #5ddcff, #3c67e3 43%, #4e00c2);
@@ -123,34 +174,36 @@ hgroup, footer{
     opacity: 0;
 }
 
-.card::before {
-    width: 100.6%;
-    height: 102%;
-    border-radius: 4rem;
-    top: -1%;
-    left: -.3%;
+.cta::before {
+    width: 100.25%;
+    height: 101%;
+    top: -0.5%;
+    left: -0.05%;
 }
 
-.card::after {
-    top: calc(var(--card-height) / 6);
+.cta::after {
+    top: calc(var(--card-height) / 10);
     left: 0;
     right: 0;
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
+    transform: scale(1.03);
+    filter: blur(calc(var(--card-height) / 12));
     transition: opacity .5s;
 }
 
-.card:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
+.cta:hover {
+    color: rgb(33, 0, 198);
+    background-color: #e1e1e1;
+    transition: color 1s;
 }
-.card:hover:before, .card:hover:after {
-  animation: spin 2.5s linear infinite;
-  opacity: 1;
+.cta:hover:before, .cta:hover:after {
+    animation: spin 2.5s linear infinite;
+    opacity: 1;
 }
+
+
 
 
 @keyframes spin {
