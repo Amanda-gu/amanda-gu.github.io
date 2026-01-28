@@ -46,7 +46,11 @@ body{
 }
 @media(width<800px){
     :root{
-         --space-page-margin: 2rem;
+        --space-bar-0: 0.6rem;
+        --space-bar-1: 0.8rem;
+        --space-bar-2: calc(var(--space-bar-1) * 1.8);
+        --space-bar-3: 2rem;
+        --space-page-margin: 2rem;
     }
 }
 
@@ -58,10 +62,9 @@ hgroup, main, footer{
 
 section, footer{
     background-color: var(--background-opacity);
-    padding-inline: var(--space-bar-2);
+    padding-inline: var(--space-bar-1);
     padding-block: var(--space-bar-1);
     border-radius: var(--space-page-margin);
-    
 }
 
 hgroup{
