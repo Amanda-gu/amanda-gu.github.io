@@ -66,6 +66,8 @@ ul{
     /* padding-inline: var(--space-bar-2); */
     display: grid;
     gap: var(--space-bar-1);
+    grid-template-columns: 1fr 1fr 1fr;
+   
     
     li{
         padding-inline: var(--space-bar-2);
