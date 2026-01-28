@@ -16,8 +16,7 @@
     --card-width: auto;
 
     --body-copy: 1.2rem;
-    --heading-copy: calc(var(--body-copy) * 0.8);
-    --caption-copy: calc(var(--body-copy) * 0.6);
+    --caption-copy: calc(var(--body-copy) * 0.8);
 
     --space-bar-0: 0.8rem;
     --space-bar-1: 1rem;
@@ -31,7 +30,6 @@ body{
     background-color: var(--background);
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--body-copy);
-    /* block-size: 100vh; */
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-items: center;
@@ -45,7 +43,7 @@ body{
 }
 @media(width<800px){
     :root{
-         --body-copy: 1rem;
+        --body-copy: 1rem;
         --space-bar-0: 0.6rem;
         --space-bar-1: 0.8rem;
         --space-bar-2: calc(var(--space-bar-1) * 1.8);
