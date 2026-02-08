@@ -42,18 +42,18 @@ body{
 }
 
 
-@media(width<1000px){
+@media(width<1200px){
     :root{
+        --body-copy:0.8rem;
          --space-page-margin: 4rem;
     }
 }
 @media(width<800px){
     :root{
-        --body-copy: 1rem;
-        --space-bar-0: 0.6rem;
+        /* --space-bar-0: 0.6rem;
         --space-bar-1: 0.8rem;
         --space-bar-2: calc(var(--space-bar-1) * 1.8);
-        --space-bar-3: 2rem;
+        --space-bar-3: 2rem; */
         --space-page-margin: 2rem;
     }
 }
@@ -134,7 +134,7 @@ footer{
 #project{
     display: grid;
     gap: var(--space-bar-2);
-    grid-template-columns: repeat(7, 1fr); 
+    /* grid-template-columns: repeat(7, 1fr);  */
 
     li{
         @media(width<600px){
@@ -171,6 +171,7 @@ footer{
             
             a{
                 padding-inline-start: var(--space-bar-2);
+                text-align: left;
             }
             p{
                 opacity: 0;
