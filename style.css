@@ -32,8 +32,7 @@ body{
     font-size: var(--body-copy);
     font-optical-sizing: auto;
     font-weight: 100;
-    text-transform: uppercase;
-     font-variation-settings:
+    font-variation-settings:
     "wdth" 75;
     display: grid;
     height: 100vh;
@@ -46,7 +45,7 @@ hgroup, main, footer{
     margin-block: var(--space-bar-2);
 }
 
-hgroup section, footer, hgroup .cta{
+hgroup section{
     background-color: var(--background-opacity);
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
@@ -89,19 +88,31 @@ hgroup{
 
 footer{
     font-size: var(--caption-copy);
+    line-height: 140%;
     display: flex;
-    justify-content:space-between;
-    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
     color: var(--secondary-color);
     p{
         padding-block: 0.2rem;
+        max-width: 60ch;
     }
-    @media(width<1200px){
+    @media(width<500px){
         display: block;
     }
 }
 
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    h2{
+        
+    }
+}
+
 #project{
+    text-transform: uppercase;
     display: grid;
     gap: var(--space-bar-2);
     grid-template-columns: 1fr; 
@@ -166,9 +177,6 @@ footer{
         .cardinfo:hover{
             background-color: var(--background-opacity);
         }
-        .cta{
-            width: 100%;
-        }
 
     }
 
@@ -216,8 +224,8 @@ footer{
     text-align: center;
     display: flex;
     font-size: var(--body-copy);
-    color: var(--color);
-    
+    color:var(--background);
+    background-color: var(--color); 
 }
 
 
