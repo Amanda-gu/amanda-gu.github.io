@@ -8,7 +8,7 @@
 
 :root{
     --color: rgb(44, 44, 44);
-    --secondary-color: rgb(8, 12, 255);
+    --secondary-color: rgb(4, 0, 229);
     --background: #e5e8ff;
     --gradient:linear-gradient(0deg, #bcc8ff 0%, #e5e8ff 35%, #f2fdfd 100%);
     --background-opacity: rgba(0, 32, 135, 0.04);
