@@ -9,8 +9,8 @@
 :root{
     --color: rgb(44, 44, 44);
     --secondary-color: rgb(129, 129, 129);
-    --background: rgb(244, 244, 242);
-    --background-opacity: rgba(0, 0, 0, 0.026);
+    --background: rgb(33, 163, 255);
+    --background-opacity: rgba(0, 0, 0, 0.041);
 
     --sans: "Noto Sans", sans-serif;
     --mono: "Noto Sans Mono", monospace;
@@ -108,14 +108,18 @@ main{
     grid-template-columns: repeat(5, 1fr);
     column-gap: var(--space-bar-3);
 
-    section{
-       grid-column: 1 / span 2;
+    #main-content{
+        grid-column: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--space-bar-2);
+        h2{
+            font-size: var(--heading-copy); 
+            line-height: 140%;
+        }
     }
 
-    h2{
-        font-size: var(--heading-copy); 
-        line-height: 140%;
-    }
+   
     ul{
         grid-column: 3/ span 3;
     }
