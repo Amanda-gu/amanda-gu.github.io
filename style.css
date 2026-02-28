@@ -8,10 +8,10 @@
 
 :root{
     --color: rgb(44, 44, 44);
-    --secondary-color: rgb(129, 129, 129);
+    --secondary-color: rgb(8, 12, 255);
     --background: #e5e8ff;
     --gradient:linear-gradient(0deg, #bcc8ff 0%, #e5e8ff 35%, #f2fdfd 100%);
-    --background-opacity: rgba(0, 32, 135, 0.05);
+    --background-opacity: rgba(0, 32, 135, 0.04);
 
     --sans: "Noto Sans", sans-serif;
     --mono: "Noto Sans Mono", monospace;
@@ -19,9 +19,9 @@
     --card-height:1rem;
     --card-width: auto;
 
-    --body-copy: 1.1rem;
-    --caption-copy: calc(var(--body-copy) * 0.8);
-    --heading-copy: calc(var(--body-copy) * 2);
+    --body-copy: 1.3rem;
+    --caption-copy: calc(var(--body-copy) * 0.6);
+    --heading-copy: calc(var(--body-copy) * 1.5);
 
     --space-bar-0: 0.4rem;
     --space-bar-1: 0.6rem;
@@ -96,7 +96,6 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    color: var(--secondary-color);
     p{
         padding-block: 0.2rem;
     }
@@ -119,7 +118,6 @@ main{
         h2{
             font-size: var(--heading-copy); 
             line-height: 140%;
-            color: var(--secondary-color);
         }
     }
 
@@ -130,13 +128,17 @@ main{
 }
 
 #project{
-    text-transform:capitalize;
     display: grid;
     grid-template-columns: 1fr; 
 
     li{
         border-block-end: solid var(--background-opacity);
         padding-block: var(--space-bar-1);
+    }
+    summary{
+        font-size: var(--caption-copy);
+        padding: var(--space-bar-2);
+        color: var(--secondary-color);
     }
 
     .card {
@@ -158,12 +160,12 @@ main{
             align-items: baseline;
             width: 100%;
             border-radius: var(--space-page-margin);
-            padding: var(--space-bar-0);
+            padding: var(--space-bar-1);
             
             .cardtitle{
                 display: flex;
                 gap: var(--space-bar-1);
-                padding-inline-start: calc(var(--space-bar-2) - var(--space-bar-0)) ;
+                padding-inline-start: calc(var(--space-bar-2) - var(--space-bar-1)) ;
 
                 .arrow{
                     opacity: 0;
@@ -174,6 +176,7 @@ main{
                 font-family: var(--mono);
                 display: flex;
                 gap: 0.3rem;
+                color: var(--color);
 
                 tag{
                     text-transform: uppercase;
@@ -181,20 +184,25 @@ main{
                     background-color: var(--background-opacity);
                     padding-inline: var(--space-bar-2);
                     padding-block: var(--space-bar-0);
-                    border-radius: var(--space-page-margin);
+                    border-radius: 0.4rem;
                 }
             }
         } 
 
         .cardinfo:hover{
-            background-color: var(--background-opacity);
             p{
-                    font-style: italic;
-                    font-weight: 400;
+                font-style: italic;
+                color:var(--secondary-color)
             }
-
             .arrow{
                 opacity: 1;
+            }
+            .tags{
+                color: var(--secondary-color);
+                tag{
+                    border-radius: 100rem;
+                }
+            
             }
         }
 
@@ -205,7 +213,7 @@ main{
 
 em{
     font-style: italic;
-    color: var(--color);
+    color: var(--secondary-color);
 }
 
 /* i want to have a cool hover efffect */
@@ -231,14 +239,13 @@ em{
     background-color: var(--color); 
 }
 
-
 .cta:before, .cta:after {
     content: "";
     position: absolute;
     border-radius: var(--space-page-margin);
     background-image: linear-gradient(
     var(--rotate)
-    , #ffffff, #ffffff 43%, #d5d5d5);
+    , #0221bd, #ffffff 43%, #000000);
     z-index: -1;
     animation: none;
     opacity: 0;
@@ -264,8 +271,7 @@ em{
 }
 
 .cta:hover {
-    color: var(--link-color);
-    background-color: #ffffff;
+    background-color: var(--secondary-color);
     transition: color 1s;
 }
 .cta:hover:before, .cta:hover:after {
