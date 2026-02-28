@@ -20,14 +20,14 @@
     --card-width: auto;
 
     --body-copy: 1.3rem;
-    --caption-copy: calc(var(--body-copy) * 0.6);
+    --caption-copy: calc(var(--body-copy) * 0.7);
     --heading-copy: calc(var(--body-copy) * 1.5);
 
     --space-bar-0: 0.4rem;
     --space-bar-1: 0.6rem;
     --space-bar-2: calc(var(--space-bar-1) * 1.8);
     --space-bar-3: 4rem;
-    --space-page-margin: 10rem;
+    --space-page-margin: 4rem;
 }
 
 body{
@@ -139,6 +139,7 @@ main{
     summary{
         font-size: var(--caption-copy);
         color: var(--color);
+        line-height: 140%;
     }
 
     .card {
@@ -279,15 +280,9 @@ em{
 }
 
 
-@media(width<1200px){
-    :root{
-         --space-page-margin: 4rem;
-    }
-}
-@media(width<900px){
-    :root{
-        --space-page-margin: 2rem;
-    }
+
+@media(width<1100px){
+
     body{
         height: max-content;
     }
@@ -305,7 +300,8 @@ em{
 
 @media(width<600px){
     :root{
-        --space-page-margin: 2rem;
+        --space-page-margin: 1.4rem;
+        --space-bar-1: 0.5rem; 
     }
     #project{
         li{
@@ -316,7 +312,6 @@ em{
                 flex-direction: column;
                 row-gap: var(--space-bar-1);
                 align-items: left;
-                padding:0;
                 
                 .cardtitle{
                     .arrow{
