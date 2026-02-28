@@ -47,7 +47,7 @@ hgroup, main, footer{
     margin-block: var(--space-bar-2);
 }
 
-hgroup section{
+hgroup section, .contact{
     background-color: var(--background-opacity);
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
@@ -97,7 +97,6 @@ footer{
     color: var(--secondary-color);
     p{
         padding-block: 0.2rem;
-        max-width: 60ch;
     }
     @media(width<500px){
         display: block;
@@ -106,10 +105,19 @@ footer{
 
 main{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: var(--space-bar-3);
+
+    section{
+       grid-column: 1 / span 2;
+    }
 
     h2{
-        
+        font-size: var(--heading-copy); 
+        line-height: 140%;
+    }
+    ul{
+        grid-column: 3/ span 3;
     }
 }
 
