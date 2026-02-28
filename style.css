@@ -33,12 +33,12 @@
 body{
     color: var(--color);
     background-image: var(--gradient);
+    background-attachment: fixed;
     font-family: var(--sans);
     font-size: var(--body-copy);
     font-optical-sizing: auto;
     font-weight: 100;
     display: grid;
-    height: 100vh;
     grid-template-rows: min-content 1fr min-content;
     align-items: center;
 }
@@ -129,9 +129,8 @@ main{
 }
 
 #project{
-    text-transform: uppercase;
+    text-transform:capitalize;
     display: grid;
-    /* gap: var(--space-bar-2); */
     grid-template-columns: 1fr; 
 
     li{
@@ -141,7 +140,6 @@ main{
 
     .card {
         position: relative;
-
         gap: var(--space-bar-1);
         display: flex;
         font-size: var(--body-copy);
