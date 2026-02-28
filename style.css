@@ -104,15 +104,14 @@ footer{
 #project{
     display: grid;
     gap: var(--space-bar-2);
-    grid-template-columns: repeat(8, 1fr); 
+    grid-template-columns: 1fr; 
 
-    li{
+    /* li{
         @media(width<600px){
-            grid-column: 1 /span 8;
+            grid-column: 1 /span 1;
             }
-    }
+    } */
     .card {
-    
         position: relative;
         border-radius: var(--space-bar-3);
         align-items: left;
@@ -121,7 +120,6 @@ footer{
         flex-direction: column;
         font-size: var(--body-copy);
         color: var(--color);
-        /* background-color: var(--background-opacity); */
 
         img{
             border-radius: var(--space-bar-2);
@@ -134,7 +132,6 @@ footer{
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            background-color: var(--background-opacity);
             border-radius: var(--space-page-margin);
             padding: var(--space-bar-0);
             
@@ -165,14 +162,17 @@ footer{
         .cardinfo:hover .arrow{
                 opacity: 1;
                 color: var(--color);
-            }
+        }
+        .cardinfo:hover{
+            background-color: var(--background-opacity);
+        }
         .cta{
             width: 100%;
         }
 
     }
 
-    #binding{
+    /* #binding{
         grid-column: 1 /span 3;
         grid-row: 1;
     }
@@ -192,7 +192,7 @@ footer{
     #functions{
         grid-column: 1 /span 3;
         grid-row: 5;
-    }
+    } */
 }
 
 
