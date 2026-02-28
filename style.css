@@ -297,9 +297,19 @@ main{
          --space-page-margin: 4rem;
     }
 }
-@media(width<800px){
+@media(width<900px){
     :root{
         --space-page-margin: 2rem;
+    }
+    main{
+       grid-template-columns: repeat(1, 1fr);
+       row-gap: var(--space-bar-3);
+        #main-content, ul{
+            grid-column: 1/ span 1;
+        }
+        h2{
+            max-width: 40ch;
+        }
     }
 }
 
