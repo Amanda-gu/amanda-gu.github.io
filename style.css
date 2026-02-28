@@ -130,6 +130,7 @@ main{
 #project{
     display: grid;
     grid-template-columns: 1fr; 
+    gap: var(--space-bar-2);
 
     li{
         border-block-end: solid var(--background-opacity);
@@ -137,13 +138,12 @@ main{
     }
     summary{
         font-size: var(--caption-copy);
-        padding: var(--space-bar-2);
-        color: var(--secondary-color);
+        color: var(--color);
     }
 
     .card {
         position: relative;
-        gap: var(--space-bar-1);
+        gap: var(--space-bar-3);
         display: flex;
         font-size: var(--body-copy);
         color: var(--color);
@@ -160,12 +160,11 @@ main{
             align-items: baseline;
             width: 100%;
             border-radius: var(--space-page-margin);
-            padding: var(--space-bar-1);
+            padding-block-end: var(--space-bar-2);
             
             .cardtitle{
                 display: flex;
                 gap: var(--space-bar-1);
-                padding-inline-start: calc(var(--space-bar-2) - var(--space-bar-1)) ;
 
                 .arrow{
                     opacity: 0;
@@ -282,7 +281,6 @@ em{
 
 @media(width<1200px){
     :root{
-        --body-copy:0.8rem;
          --space-page-margin: 4rem;
     }
 }
@@ -305,7 +303,7 @@ em{
     }
 }
 
-@media(width<500px){
+@media(width<600px){
     :root{
         --space-page-margin: 2rem;
     }
@@ -321,7 +319,6 @@ em{
                 padding:0;
                 
                 .cardtitle{
-                    padding-inline-start: 0;
                     .arrow{
                     opacity: 1;
                 }
