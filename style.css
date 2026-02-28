@@ -9,9 +9,9 @@
 :root{
     --color: rgb(44, 44, 44);
     --secondary-color: rgb(129, 129, 129);
-    --background: #ffffff;
-    --gradient:linear-gradient(0deg, #0d00ff 0%, #4a5dd5 35%, #ffffff 100%);
-    --background-opacity: rgba(0, 0, 0, 0.041);
+    --background: #e5e8ff;
+    --gradient:linear-gradient(0deg, #bcc8ff 0%, #e5e8ff 35%, #f2fdfd 100%);
+    --background-opacity: rgba(0, 32, 135, 0.05);
 
     --sans: "Noto Sans", sans-serif;
     --mono: "Noto Sans Mono", monospace;
@@ -49,7 +49,6 @@ hgroup, main, footer{
 }
 
 hgroup section, .contact{
-    background-color: var(--background-opacity);
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
     border-radius: var(--space-page-margin);
@@ -69,6 +68,7 @@ hgroup{
     section:first-child{
         backdrop-filter: blur(2rem);
         overflow: hidden;
+        background-color: var(--background-opacity);
     }
     section{
         display: flex;
@@ -129,8 +129,13 @@ main{
 #project{
     text-transform: uppercase;
     display: grid;
-    gap: var(--space-bar-2);
+    /* gap: var(--space-bar-2); */
     grid-template-columns: 1fr; 
+
+    li{
+        border-block-end: solid var(--background-opacity);
+        padding-block: var(--space-bar-1);
+    }
 
     /* li{
         @media(width<600px){
@@ -139,7 +144,6 @@ main{
     } */
     .card {
         position: relative;
-        border-radius: var(--space-bar-3);
         align-items: left;
         gap: var(--space-bar-1);
         display: flex;
