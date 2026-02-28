@@ -36,6 +36,7 @@ body{
      font-variation-settings:
     "wdth" 75;
     display: grid;
+    height: 100vh;
     grid-template-rows: min-content 1fr min-content;
     align-items: center;
 }
@@ -44,7 +45,6 @@ hgroup, main, footer{
     margin-inline: var(--space-page-margin);
     margin-block: var(--space-bar-2);
 }
-
 
 hgroup section, footer, hgroup .cta{
     background-color: var(--background-opacity);
@@ -126,6 +126,7 @@ footer{
         img{
             border-radius: var(--space-bar-2);
             overflow: hidden;
+            display: none;
         }
         
         .cardinfo{
@@ -140,12 +141,8 @@ footer{
             .cardtitle{
                 display: flex;
                 gap: var(--space-bar-1);
-                
-                a{
-                    padding-inline-start: var(--space-bar-2);
-                    text-align: left;
-                }
-                p{
+                padding-inline-start: calc(var(--space-bar-2) - var(--space-bar-0)) ;
+                .arrow{
                     opacity: 0;
                 }
             }
@@ -165,7 +162,7 @@ footer{
             }
         } 
         
-        .cardinfo:hover p{
+        .cardinfo:hover .arrow{
                 opacity: 1;
                 color: var(--color);
             }
