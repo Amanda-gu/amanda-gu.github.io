@@ -39,6 +39,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 100;
     display: grid;
+    height: 100vh;
     grid-template-rows: min-content 1fr min-content;
     align-items: center;
 }
@@ -282,6 +283,9 @@ em{
 @media(width<900px){
     :root{
         --space-page-margin: 2rem;
+    }
+    body{
+        height: max-content;
     }
     main{
        grid-template-columns: repeat(1, 1fr);
