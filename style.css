@@ -162,6 +162,12 @@ main{
             width: 100%;
             border-radius: var(--space-page-margin);
             padding-block-end: var(--space-bar-2);
+            p, .tags{
+                transition: color 1600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+                tag{
+                    transition: border-radius 1600ms ease;
+                }  
+            }
             
             .cardtitle{
                 display: flex;
@@ -190,9 +196,11 @@ main{
         } 
 
         .cardinfo:hover{
+
             p{
                 font-style: italic;
-                color:var(--secondary-color)
+                color:var(--secondary-color);
+                
             }
             .arrow{
                 opacity: 1;
@@ -237,6 +245,7 @@ em{
     font-size: var(--body-copy);
     color:var(--background);
     background-color: var(--color); 
+    transition: background-color 1000ms ease-in-out;
 }
 
 .cta:before, .cta:after {
@@ -249,6 +258,7 @@ em{
     z-index: -1;
     animation: none;
     opacity: 0;
+    
 }
 
 .cta::before {
@@ -272,7 +282,7 @@ em{
 
 .cta:hover {
     background-color: var(--secondary-color);
-    transition: color 1s;
+
 }
 .cta:hover:before, .cta:hover:after {
     animation: spin 2.5s linear infinite;
