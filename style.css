@@ -52,7 +52,7 @@ hgroup, main, footer{
 hgroup section, .contact{
     padding-inline: var(--space-bar-2);
     padding-block: var(--space-bar-1);
-    border-radius: var(--space-page-margin);
+    border-radius: 100rem;
 }
 
 hgroup{
@@ -245,20 +245,22 @@ em{
     font-size: var(--body-copy);
     color:var(--background);
     background-color: var(--color); 
+    border-radius: 1rem;
     transition: background-color 1000ms ease-in-out;
+     transition: border-radius 1000ms ease-in-out;
 }
 
 .cta:before, .cta:after {
     content: "";
     position: absolute;
-    border-radius: var(--space-page-margin);
+    border-radius: 1rem;
     background-image: linear-gradient(
     var(--rotate)
-    , #0221bd, #ffffff 43%, #000000);
+    , #0221bd, #ffffff 43%, #c99bf4);
     z-index: -1;
     animation: none;
     opacity: 0;
-    
+    transition: border-radius 1000ms ease-in-out;
 }
 
 .cta::before {
@@ -282,7 +284,7 @@ em{
 
 .cta:hover {
     background-color: var(--secondary-color);
-
+    border-radius: 4rem;
 }
 .cta:hover:before, .cta:hover:after {
     animation: spin 2.5s linear infinite;
