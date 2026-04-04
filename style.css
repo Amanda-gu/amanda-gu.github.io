@@ -27,7 +27,7 @@
     --space-bar-1: 0.6rem;
     --space-bar-2: calc(var(--space-bar-1) * 1.8);
     --space-bar-3: 4rem;
-    --space-page-margin: 4rem;
+    --space-page-margin: 2rem;
 
     --button-corner: 0.4rem;
     --button-style: solid 0.05rem var(--color);
