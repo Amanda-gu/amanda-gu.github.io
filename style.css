@@ -171,8 +171,8 @@ main{
                 z-index: -1;
                 opacity: 0;
                 position: absolute;
-                width: 12rem; 
-                translate: 160% -50%;
+                width: 18rem; 
+                translate: 130% -50%;
                 transition: opacity 1200ms ease;
             }
             
