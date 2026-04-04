@@ -1,25 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
 }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --color: rgb(44, 44, 44);
-    --secondary-color: rgb(4, 0, 229);
-    --background: #e5e8ff;
-    --gradient:linear-gradient(0deg, #bcc8ff 0%, #e5e8ff 35%, #f2fdfd 100%);
-    --background-opacity: rgba(0, 32, 135, 0.04);
+    --color: rgb(0, 0, 0);
+    --secondary-color: #7b7b7b;
+    --background: #ffffff;
+    --gradient:linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
+    --background-opacity: rgba(0, 0, 0, 0.04);
 
-    --sans: "Noto Sans", sans-serif;
-    --mono: "Noto Sans Mono", monospace;
+    --sans: "Xanh Mono", monospace;
+    --mono: "Xanh Mono", monospace;
 
-    --card-height:1rem;
+    --card-height: 1rem;
     --card-width: auto;
 
-    --body-copy: 1.3rem;
+    --body-copy: 1.2rem;
     --caption-copy: calc(var(--body-copy) * 0.7);
     --heading-copy: calc(var(--body-copy) * 1.5);
 
@@ -34,10 +34,8 @@ body{
     color: var(--color);
     background-image: var(--gradient);
     background-attachment: fixed;
-    font-family: var(--sans);
+    font-family: "Xanh Mono", monospace;
     font-size: var(--body-copy);
-    font-optical-sizing: auto;
-    font-weight: 100;
     display: grid;
     height: 100vh;
     grid-template-rows: min-content 1fr min-content;
