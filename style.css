@@ -289,7 +289,9 @@ main{
     text-align: center;
     display: flex;
     font-size: var(--body-copy);
-    color:var(--color);
+
+    background-color: var(--color);
+    color:var(--background);
     border-radius: var(--button-corner);
     border: var(--button-style);
     transition: background-color 1000ms ease-in-out;
@@ -308,7 +310,7 @@ main{
     opacity: 0;
     transition: border-radius 1000ms ease-in-out;
 }
-
+/* 
 .cta::before {
     width: 100.2%;
     height: 101%;
@@ -326,11 +328,11 @@ main{
     transform: scale(1.01);
     filter: blur(calc(var(--card-height) / 2));
     transition: opacity .5s;
-}
+} */
 
 .cta:hover {
-    background-color: var(--color);
-    color: var(--background);
+    background-color: transparent;
+    color: var(--color);
     font-style: italic;
 }
 .cta:hover:before, .cta:hover:after {
