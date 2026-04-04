@@ -145,7 +145,7 @@ main{
         overflow: visible;
         border-radius: var(--button-corner);
         border: var(--button-style);
-
+        
         /* a */
         .cardinfo{
             display: inline-flex;
@@ -214,6 +214,13 @@ main{
         } 
     
     }
+
+    @media(width<700px){
+        .card{
+            color: var(--color);
+        }
+    }
+            
 
     .card:hover{
          background-color: var(--color);
