@@ -67,7 +67,7 @@ body::selection {
 
 body{
     cursor: none;
-    touch-action: none;
+    touch-action: manipulation;
     color: light-dark(
         var(--light-primary-color),
         var(--dark-primary-color)
