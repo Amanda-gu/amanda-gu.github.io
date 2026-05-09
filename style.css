@@ -86,7 +86,6 @@ body{
 
 hgroup, main, footer{
     margin: var(--space-page-margin);
-   
 }
 
 .contact{
@@ -96,15 +95,20 @@ hgroup, main, footer{
 }
 
 hgroup{
+    margin: 0;
+    padding: var(--space-page-margin);
     display: flex;
     justify-content:space-between;
     column-gap: var(--space-bar-1);
     align-items: center;
     font-size: var(--heading-copy);
     position: sticky;
-    inset-block-start: var(--space-bar-2);
+    inset-block-start: 0;
     z-index: 1;
-
+    background-color: light-dark(
+        var(--light-bg-color),
+        var(--dark-bg-color)
+    );
 
     #buttons{
         display: flex;
@@ -433,11 +437,12 @@ hgroup:hover, #course:hover{
 
 
 div{
-        position: fixed;
-        z-index: 2;
-        pointer-events: none;
-        translate: -50% -50%;
-         mix-blend-mode: difference;
+    position: fixed;
+    z-index: 2;
+    pointer-events: none;
+    translate: -50% -50%;
+    mix-blend-mode: difference;
+
     }
     #h-line, #v-line{
         background-color: light-dark(
