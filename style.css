@@ -7,11 +7,24 @@
 }
 
 :root{
-    --color: rgb(0, 0, 0);
-    --secondary-color: #7b7b7b;
-    --background: #ffffff;
-    --gradient:linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
-    --background-opacity: rgba(0, 0, 0, 0.04);
+
+    color-scheme: light dark;
+
+    --light-primary-color: #111111;
+    --dark-primary-color: #ffffff;
+
+    --light-secondary-color: #3e3e3e;
+    --dark-secondary-color: #c0c0c0;
+
+    --light-bg-color: #ffffff;
+    --dark-bg-color: #111111;
+
+    --light-bg-opacity: rgba(0, 0, 0, 0.04);
+    --dark-bg-opacity: rgba(255, 255, 255, 0.04);
+
+    --light-grad:linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
+    --dark-grad: linear-gradient(0deg, #111111 0%, #111111 35%, #111111 100%);
+
 
     --sans: "Xanh Mono", monospace;
     --mono: "Xanh Mono", monospace;
@@ -29,13 +42,22 @@
     --space-bar-3: 4rem;
     --space-page-margin: 2rem;
 
-    --button-corner: 0.4rem;
-    --button-style: solid 0.05rem var(--color);
-}
+    --button-corner: 0.2rem;
+    --button-style: solid 0.03rem light-dark(
+            var(--light-secondary-color),
+            var(--dark-secondary-color)
+        );
+    }
 
 body{
-    color: var(--color);
-    background-image: var(--gradient);
+    color: light-dark(
+        var(--light-primary-color),
+        var(--dark-primary-color)
+    );
+    background-image: light-dark(
+        var(--light-grad),
+        var(--dark-grad)
+    );
     background-attachment: fixed;
     font-family: "Xanh Mono", monospace;
     font-size: var(--body-copy);
@@ -80,10 +102,16 @@ hgroup{
         svg{
                 width: 1rem;
                 height: 1rem;
-                fill: var(--color);
+                fill: light-dark(
+                    var(--light-primary-color),
+                    var(--dark-primary-color)
+                );
             }
         svg:hover{
-             fill: var(--secondary-color);
+             fill: light-dark(
+                var(--light-secondary-color),
+                var(--dark-secondary-color)
+            );
         }
     }  
     
@@ -134,7 +162,10 @@ main{
 
     summary{
         font-size: var(--caption-copy);
-        color: var(--color);
+        color: light-dark(
+            var(--light-primary-color),
+            var(--dark-primary-color)
+        );
         line-height: 140%;
     }
 
@@ -209,7 +240,10 @@ main{
                 tag{
                     text-transform: uppercase;
                     font-size: var(--caption-copy);
-                    background-color: var(--background-opacity);
+                    background-color: light-dark(
+                        var(--light-bg-opacity),
+                        var(--dark-bg-opacity)
+                    );
                     padding-inline: var(--space-bar-2);
                     padding-block: var(--space-bar-0);
                     border-radius: var(--button-corner);
@@ -221,15 +255,24 @@ main{
 
     @media(width<700px){
         .card{
-            color: var(--color);
+            color: light-dark(
+                var(--light-primary-color),
+                var(--dark-primary-color)
+            );
         }
     }
             
 
     .card:hover{
-         background-color: var(--color);
+         background-color: light-dark(
+                var(--light-primary-color),
+                var(--dark-primary-color)
+            );
         *{
-            color: var(--background);
+            color: light-dark(
+                var(--light-bg-color),
+                var(--dark-bg-color)
+            );
         } 
 
         .cardinfo{
@@ -243,8 +286,14 @@ main{
             }
             .tags{  
                 tag{
-                    background-color: var(--background);
-                    color: var(--color);
+                    background-color: light-dark(
+                        var(--light-secondary-color),
+                        var(--dark-secondary-color)
+                    );
+                    color: light-dark(
+                        var(--light-bg-color),
+                        var(--dark-bg-color)
+                    );
                 }
             }
     
@@ -263,10 +312,16 @@ main{
 
 #course{
     padding-block-end: 0.2rem;
-    color: var(--secondary-color);
+    color: light-dark(
+        var(--light-primary-color),
+        var(--dark-primary-color)
+    );
 }
 hgroup:hover, #course:hover{
-    color: var(--color);
+    color: light-dark(
+        var(--light-secondary-color),
+        var(--dark-secondary-color)
+    );
     font-style: italic;
 }
 
@@ -279,7 +334,10 @@ hgroup:hover, #course:hover{
     the border is an illusion made by offsetting the color block
     */
 .iconcta:hover{
-    fill: var(--secondary-color);
+    fill: light-dark(
+        var(--light-primary-color),
+        var(--dark-primary-color)
+    );
 }
 .cta{
     width: max-content;
@@ -290,8 +348,14 @@ hgroup:hover, #course:hover{
     display: flex;
     font-size: var(--body-copy);
 
-    background-color: var(--color);
-    color:var(--background);
+    background-color: light-dark(
+        var(--light-primary-color),
+        var(--dark-primary-color)
+    );
+    color: light-dark(
+        var(--light-bg-color),
+        var(--dark-bg-color)
+    );
     border-radius: var(--button-corner);
     border: var(--button-style);
     transition: background-color 1000ms ease-in-out;
@@ -332,7 +396,10 @@ hgroup:hover, #course:hover{
 
 .cta:hover {
     background-color: transparent;
-    color: var(--color);
+    color: light-dark(
+        var(--light-primary-color),
+        var(--dark-primary-color)
+    );
     font-style: italic;
 }
 .cta:hover:before, .cta:hover:after {
