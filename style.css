@@ -22,7 +22,7 @@
     --light-bg-opacity: rgba(0, 0, 0, 0.04);
     --dark-bg-opacity: rgba(255, 255, 255, 0.04);
 
-    --light-grad:linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
+    --light-grad: linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
     --dark-grad: linear-gradient(0deg, #111111 0%, #111111 35%, #111111 100%);
 
 
@@ -317,6 +317,7 @@ main{
         var(--dark-primary-color)
     );
 }
+
 hgroup:hover, #course:hover{
     color: light-dark(
         var(--light-secondary-color),
@@ -374,25 +375,6 @@ hgroup:hover, #course:hover{
     opacity: 0;
     transition: border-radius 1000ms ease-in-out;
 }
-/* 
-.cta::before {
-    width: 100.2%;
-    height: 101%;
-    top: -0.5%;
-    left: -0.05%;
-}
-
-.cta::after {
-    top: calc(var(--card-height) / 10);
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(1.01);
-    filter: blur(calc(var(--card-height) / 2));
-    transition: opacity .5s;
-} */
 
 .cta:hover {
     background-color: transparent;
@@ -407,6 +389,49 @@ hgroup:hover, #course:hover{
     opacity: 1;
 }
 
+/* html {
+    --vh: 100vh;
+    --vw: 100vw;
+    --c1: #000000;
+    --c2: #ffffff;
+    
+    --_g: #0000 90deg,var(--c1) 0;
+    background: 
+        conic-gradient(from 90deg at 1px 1px,var(--_g)),
+        conic-gradient(from 90deg at 1px 1px,var(--_g)),
+        var(--c2);
+    background-size: calc(var(--vw)/2) calc(var(--vh)/2);
+} */
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+    z-index: -2;
+
+    --vh: 100vh;
+    --vw: 100vw;
+    
+    --_g: light-dark(
+            var(--light-bg-color),
+            var(--dark-bg-color)
+        ) 90deg, light-dark(
+            var(--light-primary-color),
+            var(--dark-primary-color)
+        ) 0;
+
+    background: 
+        conic-gradient(from 90deg at 1px 1px,var(--_g)),
+        conic-gradient(from 90deg at 1px 1px,var(--_g)),
+        light-dark(
+            var(--light-bg-color),
+            var(--dark-bg-color)
+        );
+    background-size: calc(var(--vw)/2) calc(var(--vh)/2); 
+
+}
 
 
 @media(width<1100px){
