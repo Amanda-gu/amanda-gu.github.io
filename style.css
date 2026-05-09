@@ -66,7 +66,6 @@ body::selection {
 /* change selection color mdn https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::selection */
 
 body{
-    /* touch-action: none; */
     cursor: none;
     color: light-dark(
         var(--light-primary-color),
@@ -436,46 +435,45 @@ hgroup:hover, #course:hover{
     opacity: 1;
 }
 
-#pointer-box{
+#bg{
+    position: absolute;
+    inset: 0;
+    z-index: 2;    
     touch-action: none;
     pointer-events: none;
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    width: 100vh;
-    height: 100vh;
-    z-index: 3;
     div{
         position: fixed;
         translate: -50% -50%;
-        mix-blend-mode: difference; 
-         
+        mix-blend-mode: difference;    
     }
     #h-line, #v-line{
-        background-color: light-dark(
-           var(--light-secondary-color),
-            var(--dark-secondary-color)
-        );
+                background-color: light-dark(
+                   var(--light-secondary-color),
+                    var(--dark-secondary-color)
+                );
     }
-
+        
     #h-line{
-        width: 200vw;
-        height:  calc(var(--space-bar-0)/15);
+                width: 200vw;
+                height:  calc(var(--space-bar-0)/15);
     }
-
+        
     #v-line{
         width: calc(var(--space-bar-0)/10);
         height: 200vh;
     }
-
+        
     #sq{
         width: 1rem;
         height: 1rem;
         background-color: light-dark(
-           var(--light-primary-color),
+            var(--light-primary-color),
             var(--dark-primary-color)
-        );}
+            );
+    }
 }
+
+
 
     
 
