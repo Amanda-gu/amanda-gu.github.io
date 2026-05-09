@@ -22,8 +22,8 @@
     --light-bg-opacity: rgba(0, 0, 0, 0.04);
     --dark-bg-opacity: rgba(255, 255, 255, 0.04);
 
-    --light-grad: linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
-    --dark-grad: linear-gradient(0deg, #111111 0%, #111111 35%, #111111 100%);
+    --dark-grad: linear-gradient(0deg, #c4c4c4 0%, #ffffff 35%, #fbfbfb 100%);
+    --light-grad: linear-gradient(0deg, #111111 90%, #111111 100%, #111111 100%);
 
 
     --sans: "Xanh Mono", monospace;
@@ -50,6 +50,7 @@
     }
 
 body{
+    mix-blend-mode: difference;
     color: light-dark(
         var(--light-primary-color),
         var(--dark-primary-color)
@@ -389,31 +390,41 @@ hgroup:hover, #course:hover{
 }
 
 
-
 div{
-    position: absolute;
-    background-color: light-dark(
-        var(--light-primary-color),
-        var(--dark-primary-color)
-    );
-    z-index: -2;
+        position: fixed;
+        background-color: light-dark(
+            var(--light-secondary-color),
+            var(--dark-secondary-color)
+        );
+    
+        /* background: radial-gradient(circle,light-dark(
+            var(--light-secondary-color),
+            var(--dark-secondary-color)
+        ) 0%, light-dark(
+            var(--light-bg-opacity),
+            var(--dark-bg-opacity)
+        ) 100%); */
+        mix-blend-mode: luminosity;
+        z-index: 2;
+        pointer-events: none;
+        translate: -50% -50%;
+        /* this is to center cursor  */
+    }
 
-     background-color: blue;
-    pointer-events: none;
-    mix-blend-mode: color-dodge;
-    translate: -50% -50%;
-     /* this is to center cursor  */
+    #h-line{
+        width: 200vw;
+        height:  calc(var(--space-bar-0)/15);
+    }
 
-}
-#h-line{
-    width: 100vw;
-    height:  calc(var(--space-bar-0)/15);
-}
+    #v-line{
+        width: calc(var(--space-bar-0)/10);
+        height: 200vh;
+    }
 
-#v-line{
-    width: calc(var(--space-bar-0)/10);
-    height: 100vh;
-}
+    #sq{
+        width: 1rem;
+        height: 1rem;
+    }
 
 
 @media(width<1100px){
