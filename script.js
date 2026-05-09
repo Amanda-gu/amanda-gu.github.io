@@ -1,10 +1,12 @@
 
 window.addEventListener('mousemove', (e) => {
   // 1.Create a new div everytime it moves so there is a trail
-  	let particle = document.getElementById('div')
-  //assign them class in css
-	particle.className = 'trail-particle'
+  	let hLine = document.getElementById('h-line')
+    let vLine = document.getElementById('v-line')
 
-  	particle.style.left = `${e.pageX}px`
-  	particle.style.top = `${e.pageY}px`
+    hLine.style.left = `${e.pageX}px`
+    hLine.style.top = `${e.pageY}px`
+
+    vLine.style.left = `${e.pageX}px`
+    vLine.style.top = `${e.pageY}px`
 });

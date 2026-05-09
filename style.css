@@ -159,7 +159,6 @@ main{
     display: grid;
     grid-template-columns: 1fr; 
     gap: var(--space-bar-2);
-
     summary{
         font-size: var(--caption-copy);
         color: light-dark(
@@ -389,48 +388,31 @@ hgroup:hover, #course:hover{
     opacity: 1;
 }
 
-/* html {
-    --vh: 100vh;
-    --vw: 100vw;
-    --c1: #000000;
-    --c2: #ffffff;
-    
-    --_g: #0000 90deg,var(--c1) 0;
-    background: 
-        conic-gradient(from 90deg at 1px 1px,var(--_g)),
-        conic-gradient(from 90deg at 1px 1px,var(--_g)),
-        var(--c2);
-    background-size: calc(var(--vw)/2) calc(var(--vh)/2);
-} */
-canvas{
+
+
+div{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    cursor: none;
+    background-color: light-dark(
+        var(--light-primary-color),
+        var(--dark-primary-color)
+    );
     z-index: -2;
 
-    --vh: 100vh;
-    --vw: 100vw;
-    
-    --_g: light-dark(
-            var(--light-bg-color),
-            var(--dark-bg-color)
-        ) 90deg, light-dark(
-            var(--light-primary-color),
-            var(--dark-primary-color)
-        ) 0;
+     background-color: blue;
+    pointer-events: none;
+    mix-blend-mode: color-dodge;
+    translate: -50% -50%;
+     /* this is to center cursor  */
 
-    background: 
-        conic-gradient(from 90deg at 1px 1px,var(--_g)),
-        conic-gradient(from 90deg at 1px 1px,var(--_g)),
-        light-dark(
-            var(--light-bg-color),
-            var(--dark-bg-color)
-        );
-    background-size: calc(var(--vw)/2) calc(var(--vh)/2); 
+}
+#h-line{
+    width: 100vw;
+    height:  calc(var(--space-bar-0)/15);
+}
 
+#v-line{
+    width: calc(var(--space-bar-0)/10);
+    height: 100vh;
 }
 
 
