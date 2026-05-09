@@ -61,7 +61,7 @@ hgroup{
     justify-content:space-between;
     column-gap: var(--space-bar-1);
     align-items: center;
-    font-size: var(--body-copy);
+    font-size: var(--heading-copy);
     position: sticky;
     inset-block-start: var(--space-bar-2);
     z-index: 1;
@@ -265,7 +265,7 @@ main{
     padding-block-end: 0.2rem;
     color: var(--secondary-color);
 }
-#course:hover{
+hgroup:hover, #course:hover{
     color: var(--color);
     font-style: italic;
 }
