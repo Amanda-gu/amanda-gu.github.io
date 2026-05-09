@@ -441,10 +441,10 @@ hgroup:hover, #course:hover{
     z-index: 2;    
     touch-action: none;
     pointer-events: none;
+    mix-blend-mode: exclusion;    
     div{
         position: fixed;
         translate: -50% -50%;
-        mix-blend-mode: difference;    
     }
     #h-line, #v-line{
                 background-color: light-dark(
