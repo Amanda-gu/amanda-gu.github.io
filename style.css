@@ -20,7 +20,7 @@
     --light-secondary-color: #8a9185;
     --dark-secondary-color: #838880;
 
-    --light-bg-color: #d6d8cf;
+    --light-bg-color: #e3e4e0;
     --dark-bg-color: rgb(28, 28, 28);
 
     --light-bg-opacity: rgba(0, 0, 0, 0.04);
@@ -67,7 +67,7 @@ body::selection {
 
 body{
     cursor: none;
-    touch-action: manipulation;
+    touch-action: pan-y;
     color: light-dark(
         var(--light-primary-color),
         var(--dark-primary-color)
@@ -442,7 +442,7 @@ div{
     z-index: 2;
     pointer-events: none;
     translate: -50% -50%;
-    mix-blend-mode: difference;
+    mix-blend-mode: difference; 
 
     }
     #h-line, #v-line{
