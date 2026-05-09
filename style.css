@@ -291,6 +291,7 @@ main{
             );
         } 
 
+
         .cardinfo{
 
             p{
@@ -310,6 +311,17 @@ main{
                         var(--light-bg-color),
                         var(--dark-bg-color)
                     );
+
+                     @media(width<700px){
+                        background-color: light-dark(
+                            var(--light-bg-opacity),
+                            var(--dark-bg-opacity)
+                        );
+                        color: light-dark(
+                            var(--light-primary-color),
+                            var(--dark-primary-color)
+                        );
+                    }
                 }
             }
     
@@ -318,6 +330,20 @@ main{
            
             }
         }
+
+          @media(width<700px){
+            background-color: light-dark(
+                var(--light-bg-color),
+                var(--dark-bg-color)
+            );
+            *{
+                color: light-dark(
+                    var(--light-primary-color),
+                    var(--dark-primary-color)
+                );
+            } 
+
+         }
        
     }
 
