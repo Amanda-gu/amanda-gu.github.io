@@ -66,8 +66,8 @@ body::selection {
 /* change selection color mdn https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::selection */
 
 body{
+    /* touch-action: none; */
     cursor: none;
-    touch-action: pan-y;
     color: light-dark(
         var(--light-primary-color),
         var(--dark-primary-color)
@@ -436,14 +436,20 @@ hgroup:hover, #course:hover{
     opacity: 1;
 }
 
-
-div{
-    position: fixed;
-    z-index: 2;
+#pointer-box{
+    touch-action: none;
     pointer-events: none;
-    translate: -50% -50%;
-    mix-blend-mode: difference; 
-
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100vh;
+    height: 100vh;
+    z-index: 3;
+    div{
+        position: fixed;
+        translate: -50% -50%;
+        mix-blend-mode: difference; 
+         
     }
     #h-line, #v-line{
         background-color: light-dark(
@@ -468,8 +474,10 @@ div{
         background-color: light-dark(
            var(--light-primary-color),
             var(--dark-primary-color)
-        );
-    }
+        );}
+}
+
+    
 
 
 @media(width<1100px){
