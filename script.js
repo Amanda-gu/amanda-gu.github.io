@@ -1,5 +1,5 @@
 //code taken from links, but instead of creating new shape, i defined the shapes in html and styled them in css, and then just move them with js
-window.addEventListener('mousemove', (e) => {
+window.addEventListener('pointermove', (e) => {
  
   	let hLine = document.getElementById('h-line')
     let vLine = document.getElementById('v-line')
