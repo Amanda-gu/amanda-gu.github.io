@@ -363,7 +363,7 @@ main{
     );
 }
 
-hgroup:hover, #course:hover{
+h1:hover, #course:hover{
     color: light-dark(
         var(--light-secondary-color),
         var(--dark-secondary-color)
