@@ -4,6 +4,7 @@ window.addEventListener('pointermove', (e) => {
   	let hLine = document.getElementById('h-line')
     let vLine = document.getElementById('v-line')
     let sq = document.getElementById('sq')
+    let img = document.querySelectorAll('img')
 
     hLine.style.left = `${e.pageX}px`
     hLine.style.top = `${e.pageY}px`
@@ -13,6 +14,11 @@ window.addEventListener('pointermove', (e) => {
 
     sq.style.left = `${e.pageX}px`
     sq.style.top = `${e.pageY}px`
+
+    img.forEach((image) => {
+        image.style.left = `${e.pageX}px`
+        image.style.top = `${e.pageY}px`
+    })
 });
 // let canvas = document.getElementById('pointer-box');
 //   	// let hLine = document.getElementById('h-line')
