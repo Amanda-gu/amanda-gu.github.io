@@ -6,18 +6,18 @@ window.addEventListener('pointermove', (e) => {
     let sq = document.getElementById('sq')
     let img = document.querySelectorAll('img')
 
-    hLine.style.left = `${e.pageX}px`
-    hLine.style.top = `${e.pageY}px`
+    hLine.style.left = `${e.clientX}px`
+    hLine.style.top = `${e.clientY}px`
 
-    vLine.style.left = `${e.pageX}px`
-    vLine.style.top = `${e.pageY}px`
+    vLine.style.left = `${e.clientX}px`
+    vLine.style.top = `${e.clientY}px`
 
-    sq.style.left = `${e.pageX}px`
-    sq.style.top = `${e.pageY}px`
+    sq.style.left = `${e.clientX}px`
+    sq.style.top = `${e.clientY}px`
 
     img.forEach((image) => {
-        image.style.left = `${e.pageX}px`
-        image.style.top = `${e.pageY}px`
+        image.style.left = `${e.clientX}px`
+        image.style.top = `${e.clientY}px`
     })
 });
 // let canvas = document.getElementById('pointer-box');
